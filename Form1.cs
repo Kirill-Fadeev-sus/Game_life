@@ -148,5 +148,14 @@ namespace Para_06._09
         {
             StopGame();
         }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            splitContainer1.Height = this.Height - 10;
+            splitContainer1.Width = this.Width - 10;
+            pictureBox1.Height = splitContainer1.Panel2.Height;
+            pictureBox1.Width = splitContainer1.Panel2.Width;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
     }
 }
